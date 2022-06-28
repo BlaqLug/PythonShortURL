@@ -1,6 +1,5 @@
 from fastapi import FastAPI
-from backend.routes import decode, encode
-
+from routes import decode, encode
 
 app = FastAPI()
 
