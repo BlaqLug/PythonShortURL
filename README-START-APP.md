@@ -1,5 +1,3 @@
-# Bulelani python-the-shortest-url Assessment 
-
 ##  Docker Installation recommended
 
 Installation will require [Docker](https://www.docker.com/)  and Docker Compose to be installed 
