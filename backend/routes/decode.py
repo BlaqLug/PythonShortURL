@@ -1,6 +1,4 @@
-from fastapi import APIRouter, Depends
-from fastapi.exceptions import HTTPException
-
+from fastapi import APIRouter
 from models.schema import UrlSchema, ResponseUrlSchema
 from models import url_shortner
 
@@ -12,12 +10,13 @@ router = APIRouter(
 @router.get("/",response_model=ResponseUrlSchema)
 def decode_url(url: str):
     """
-    Decodes a shortened URL to its original URL
+    Desc: Decodes a shortened URL to its original URL
+    Input: Short URL starting with 'https://short.est/'
+    Output: Original URL
+    
     """
     url = UrlSchema(url=url)
 
     decoded_url = url_shortner.decode(url.url)
 
     return {"url": decoded_url}
-
-# add exception for decode

@@ -1,7 +1,7 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter
 from fastapi.exceptions import HTTPException
 
-from models.schema import UrlSchema, ResponseUrlSchema
+from models.schema import UrlSchema
 from models import url_shortner
 
 router = APIRouter(
@@ -13,7 +13,10 @@ router = APIRouter(
 @router.get("/")
 def encode_url(url: str):
     """
-    Encodes a URL to a shortened URL
+    DESC: Encodes a URL to a shortened URL
+    Input: URL that starts with http:// or https://
+    Output: shortened URL
+    
     """
     url = UrlSchema(url=url)
     try:
