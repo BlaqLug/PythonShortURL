@@ -10,7 +10,7 @@ router = APIRouter(
 )
 
 
-@router.get("/",response_model=ResponseUrlSchema)
+@router.get("/")
 def encode_url(url: str):
     """
     Encodes a URL to a shortened URL
