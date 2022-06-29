@@ -24,4 +24,4 @@ def encode_url(url: str):
     except Exception as e:
         raise HTTPException(status_code=502, detail=f"{url} is an invalid url")
 
-    return {"short URL": encoded_url}
+    return {"Short URL": encoded_url}

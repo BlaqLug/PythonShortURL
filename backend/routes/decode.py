@@ -19,4 +19,4 @@ def decode_url(url: str):
 
     decoded_url = url_shortner.decode(url.url)
 
-    return {"url": decoded_url}
+    return {"Original url": decoded_url}
